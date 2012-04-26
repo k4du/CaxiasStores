@@ -24,79 +24,63 @@
 		<script type="text/javascript">
 		$(function(){
 			$('.dropdown-toggle').dropdown();
+			$('.linav').click(function(){
+				$('.linav').each(function(){
+						if($(this).hasClass('active')){
+							$(this).removeClass('active');
+						}
+				});
+				$(this).addClass('active');
+			});
 		});
 		</script>
 		<style type="text/css">
 		.textoCabec{
-			font-size: 120px;
-		}
-		.linhaBranca{
+			background-image: url("${resource(dir: 'images', file: 'fundo.png')}") ;
+			font-size: 100px;
 			width: 100%;
+			height: 200px;
+			text-align: center;
+		}
+		.cabecalho{
+			margin-top: 110px;
+			text-decoration: overline underline;
+			font-style:  bold;
+			font-family: menu; 
 		}
 		</style>
 		<g:layoutHead/>
         <r:layoutResources />
 	</head>
 	<body>
-		<div id="grailsLogo" role="banner" class="ui-widget-header textoCabec"><img src="${resource(dir: 'images', file: 'logotipo.gif')}" alt="Grails"/>Conta Paga</div>
-		<p class="linhaBranca"> </p>
+		<div class="navbar navbar-fixed-top">
+   			<div class="navbar-inner">
+	    		<div class="container">
+	    			<a class="brand" href="#">Lojas Caxias</a>
+	    			<g:form controller="usuario" class="navbar-form pull-right form-inline" action="login">
+				      	<g:textField class="input-small" name="login" placeholder="Login"/>
+				      	<g:passwordField class="input-small" name="senha" placeholder="Senha"/>
+				      	<g:submitButton class='btn btn-inverse' name="Entrar"/>
+		      		</g:form> 
+	    			
+	    		</div>
+    		</div>
+    	</div>
+		<div class="textoCabec thumbnails"><div class="cabecalho">Lojas Caxias</div></div>
 		<a href="#create-usuario" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div class="nav" role="navigation">
-			<ul class="nav pills">
-				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<g:if test="${session.usuario}">
-				<li class="dropdown" id="menu1">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#menu1">
-					Dropdown
-					<b class="caret"></b>
-					</a>
-					<ul class="dropdown-menu">
-						<li><a href="#">Action</a></li>
-						<li><a href="#">Another action</a></li>
-						<li><a href="#">Something else here</a></li>
-						<li class="divider"></li>
-						<li><a href="#">Separated link</a></li>
-					</ul>
-				</li>
-				<li class="dropdown" id="menu1">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#menu1">
-					Dropdown
-					<b class="caret"></b>
-					</a>
-					<ul class="dropdown-menu">
-						<li><a href="#">Action</a></li>
-						<li><a href="#">Another action</a></li>
-						<li><a href="#">Something else here</a></li>
-						<li class="divider"></li>
-						<li><a href="#">Separated link</a></li>
-					</ul>
-				</li>
-				<li class="dropdown" id="menu1">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#menu1">
-					Dropdown
-					<b class="caret"></b>
-					</a>
-					<ul class="dropdown-menu">
-						<li><a href="#">Action</a></li>
-						<li><a href="#">Another action</a></li>
-						<li><a href="#">Something else here</a></li>
-						<li class="divider"></li>
-						<li><a href="#">Separated link</a></li>
-					</ul>
-				</li>
-				<li class="dropdown" id="menu5">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#menu5">
-						Usuario
-					<b class="caret"></b>
-					</a>
-					<ul class="dropdown-menu">
-						<li><g:link action="edit" controller="usuario"   params="[id:'session.usuario?.id']">Editar Usuario</g:link></li>
-						<li><g:link action="logout" controller="usuario" >Logout</g:link></li>
-					</ul>
-				</li>
-				</g:if>
-			</ul>
-		</div>
+		
+		<ul class="nav nav-tabs">
+			<li class="linav"><a href="#">Teste</a></li>
+		    <li class="linav dropdown">
+			    <a class="dropdown-toggle" data-toggle="dropdown" href="#">   Dropdown   <b class="caret"></b>  </a>
+			    <ul class="dropdown-menu">
+			    	<a>TESTE1</a>
+			    </ul>
+			</li>
+			<li class="linav"><a href="#">Teste</a></li>
+			<li class="linav"><a href="#">Teste</a></li>
+	    </ul>
+		
 		<g:layoutBody/>
 		<div class="footer" role="contentinfo"></div>
 		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>

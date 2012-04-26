@@ -57,21 +57,21 @@
 		</style>
 	</head>
 	<body>
-			<div id="dialogLogin">
-				<g:if test="${flash.message}">
-					<div class="errors" role="status">${flash.message}</div>
-			    </g:if>		
-		      <g:form controller="usuario" action="login">
-			      <p class="obrigatorio">
-			      	<label for="login">Login:</label>
-			      	<g:textField name="login"/>
-			      </p>
-			      <br>
-			      <p class="obrigatorio">
-			      	<label for="senha">Senha:</label>
-			      	<g:passwordField name="senha"/>
-			      </p>
-		      </g:form>        
-		    </div>
+<%--			<div id="dialogLogin">--%>
+<%--				<g:if test="${flash.message}">--%>
+<%--					<div class="errors" role="status">${flash.message}</div>--%>
+<%--			    </g:if>		--%>
+<%--		      <g:form controller="usuario" action="login">--%>
+<%--			      <p class="obrigatorio">--%>
+<%--			      	<label for="login">Login:</label>--%>
+<%--			      	<g:textField name="login"/>--%>
+<%--			      </p>--%>
+<%--			      <br>--%>
+<%--			      <p class="obrigatorio">--%>
+<%--			      	<label for="senha">Senha:</label>--%>
+<%--			      	<g:passwordField name="senha"/>--%>
+<%--			      </p>--%>
+<%--		      </g:form>        --%>
+<%--		    </div>--%>
 	</body>
 </html>

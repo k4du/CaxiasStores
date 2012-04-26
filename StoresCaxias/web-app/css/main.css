@@ -103,6 +103,7 @@ img {
 	padding: 0 0.25em;
 }
 
+
 .scaffold-list h1 {
 	border: none;
 }
@@ -134,17 +135,7 @@ img {
 
 /* NAVIGATION MENU */
 
-.nav {
-	background-color: #ABBF78;
-	padding: 0.5em 0.75em;
-/* 	   -moz-box-shadow: 0 0 3px 1px #aaaaaa; */
-/* 	-webkit-box-shadow: 0 0 3px 1px #aaaaaa; */
-/* 	        box-shadow: 0 0 3px 1px #aaaaaa; */
-	zoom: 1;
-}
-a:HOVER{
- 	background-color: 	#ABBF78 !important;
-}
+
 
 .nav li {
 	display: block;
