@@ -70,19 +70,30 @@
 		<a href="#create-usuario" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		
 		<ul class="nav nav-tabs">
-			<li class="linav"><a href="#">Teste</a></li>
+			<li class="linav"><a href="#">Inicio</a></li>
 		    <li class="linav dropdown">
-			    <a class="dropdown-toggle" data-toggle="dropdown" href="#">   Dropdown   <b class="caret"></b>  </a>
+			    <a class="dropdown-toggle" data-toggle="dropdown" href="#">   Lojas   <b class="caret"></b>  </a>
 			    <ul class="dropdown-menu">
-			    	<a>TESTE1</a>
+			    	<a>Padarias</a>
+			    	<a>Sapatarias</a>
+			    	<a>Lojas de Roupa</a>
 			    </ul>
 			</li>
-			<li class="linav"><a href="#">Teste</a></li>
-			<li class="linav"><a href="#">Teste</a></li>
+			<li class="linav"><a href="#">Contato</a></li>
 	    </ul>
 		
 		<g:layoutBody/>
-		<div class="footer" role="contentinfo"></div>
+		
+		<div class="navbar navbar-fixed-bottom">
+   			<div class="navbar-inner">
+	    		<div class="container">
+	    			<a class="brand" href="#">Lojas Caxias</a>
+	    		</div>
+    		</div>
+    	</div>
+		
+		
+		
 		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
 		<g:javascript library="application"/>
         <r:layoutResources />
