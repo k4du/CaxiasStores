@@ -4,7 +4,7 @@ class Usuario {
 	String login
 	String senha
 	String email
-	Pessoa pessoa
+	static belongsTo = [loja:Loja]
 	
 	String toString(){
 		login
@@ -13,6 +13,5 @@ class Usuario {
 		email(email:true, blank:false, unique:true)
 		login(blank:false,unique:true)
 		senha(blank:false)
-		pessoa(nullable:true)
     }
 }

@@ -1,3 +1,6 @@
+<%@ page import="storescaxias.Ramo" %>
+
+
 <!doctype html>
 <!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
 <!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
@@ -67,16 +70,14 @@
     		</div>
     	</div>
 		<div class="textoCabec thumbnails"><div class="cabecalho">Lojas Caxias</div></div>
-		<a href="#create-usuario" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		
 		<ul class="nav nav-tabs">
-			<li class="linav"><a href="#">Inicio</a></li>
+			<li class="linav"><a href="${createLink(controller:'loja', action :'list')}">Inicio</a></li>
 		    <li class="linav dropdown">
 			    <a class="dropdown-toggle" data-toggle="dropdown" href="#">   Lojas   <b class="caret"></b>  </a>
 			    <ul class="dropdown-menu">
-			    	<a>Padarias</a>
-			    	<a>Sapatarias</a>
-			    	<a>Lojas de Roupa</a>
+			    	<g:each in="${Ramo.list()}" var="ramoInstance">
+				    	<a href="${createLink(controller:'loja', action:'list', id : ramoInstance.id )}">${ramoInstance.nome}</a>
+			    	</g:each>
 			    </ul>
 			</li>
 			<li class="linav"><a href="#">Contato</a></li>
