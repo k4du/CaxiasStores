@@ -85,14 +85,14 @@
 		
 		<g:layoutBody/>
 		
-		<div class="navbar navbar-fixed-bottom">
-   			<div class="navbar-inner">
-	    		<div class="container">
-	    			<a class="brand" href="#">Lojas Caxias</a>
-	    		</div>
-    		</div>
-    	</div>
-		
+<%--		<div class="navbar navbar-fixed-bottom">--%>
+<%--   			<div class="navbar-inner">--%>
+<%--	    		<div class="container">--%>
+<%--	    			<a class="brand" href="#">Lojas Caxias</a>--%>
+<%--	    		</div>--%>
+<%--    		</div>--%>
+<%--    	</div>--%>
+<%--		--%>
 		
 		
 		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
